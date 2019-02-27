@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Saint Compilatio | The Patron Saint of Developers. 💻 Blessing lines of code since year c. 560 🕯️</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135312713-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135312713-1');
+</script>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="pixel-main-menu" id="sticker">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container-fluid">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="pixelNav">
+
+                        <!-- Nav brand -->
+                        <a href="index.html" class="nav-brand" style="color:white;">Saint Compilatio</a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="resources.html">Resources</a></li>
+                                    <li><a href="portfolio.html">Blessed confs</a></li>
+                                    <li><a href="about.html">About me</a></li>
+                                </ul>
+
+                                <!-- Top Social Info -->
+                                <div class="top-social-info ml-5">
+                                    <a href="https://twitter.com/saintcompilatio"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://github.com/saintcompilatio"><i class="fa fa-github"></i></a>
+
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/8.jpg);">
+        <div class="container-fluid h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content">
+                        <h2>Blessed confs</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+
+    <section class="contact-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUp;">
+                        <h2>Blessed events and conferences</h2>
+                        <h3>Explore all the conferences blessed and free of bugs.</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8" style="text-align: center;">
+                    <!-- Contact Form -->
+                    <p> If you are attending to a conference or organizing a conference and you want me to bless the
+                        event, please, register your conference here so I can bless it.</p>
+                    <!-- Extra large modal -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-xl">Bless
+                        my event</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MASONRY -->
+    <div class="grid" id="target" style="background-color: white;">
+       
+    </div>
+
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script type='text/javascript'>
+        var publicSpreadsheetUrl =
+            'https://docs.google.com/spreadsheets/d/18v0aK2-YZM0NBxKKQ1mI4VTn9qi9Y13_qQSrlSQQw_8/edit?usp=sharing';
+
+        function init() {
+            Tabletop.init({
+                key: publicSpreadsheetUrl,
+                callback: showInfo,
+                simpleSheet: true
+            })
+        }
+
+        function showInfo(data, tabletop) {
+            //alert('Successfully processed!')
+            data = {
+                'confs': data
+            };
+            var template = $('#template').html();
+            Mustache.parse(template); // optional, speeds up future uses
+            var rendered = Mustache.render(unescape(template), data);
+            $('#target').html(rendered);
+        }
+
+        // init Masonry
+        var $grid = $('.grid').masonry({
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            columnWidth: '.grid-sizer'
+        });
+        // layout Masonry after each image loads
+        $grid.imagesLoaded().progress(function () {
+            $grid.masonry();
+        });
+
+        $(".btn-danger").click(function () {
+            ga('send', 'event', 'Action', 'Add Event');
+        });
+
+        window.addEventListener('DOMContentLoaded', init)
+    </script>
+
+
+    <script id="template" type="x-tmpl-mustache">
+        <div class="grid-sizer"></div>
+        {{#confs}}
+        <div class="grid-item single_gallery_item">
+                <img src="{{Event_Logo_URL}}" />
+                <div class="hover-content text-center d-flex align-items-center justify-content-center">
+                        <div class="hover-text">
+                            <a href="{{Event_URL}}" target="_blank" class="zoom-img"><i class="fa fa-link" aria-hidden="true"></i></a>
+                            <h4>{{Event_Name}}</h4>
+                            <h5>{{Location}}</h5>
+                            <h4><a href="https://twitter.com/{{Event_Twitter_user}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>{{Event_Twitter_user}}</a></h4>
+                        </div>
+                    </div>
+            </div>
+        {{/confs}}
+    </script>
+
+
+
+    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCMp4gZqhcEtIC8p4gpDSGodsD5BGjvfx8ytGeWR3GN-qwdg/viewform?embedded=true"
+                    width="640" height="1131" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
